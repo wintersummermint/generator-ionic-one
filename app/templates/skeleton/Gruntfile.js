@@ -115,13 +115,11 @@ module.exports = function (grunt) {
           remove: ['script[data-remove!="false"]','link[data-remove!="false"]'],
           append: [
             {selector:'body',html:'<script src="app.full.min.js"></script>'},
-            {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'},
             {selector:'head',html:'<link href="lib/ionic/css/ionic.css" rel="stylesheet">'},
             {selector:'head',html:'<link href="css/style.css" rel="stylesheet">'},
             {selector:'head',html:'<script src="lib/ionic/js/ionic.bundle.js"></script>'},
             {selector:'head',html:'<script src="cordova.js"></script>'},
-            {selector:'head',html:' <script src="js/app.js"></script>'},
-            {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'}
+            {selector:'head',html:' <script src="js/app.js"></script>'}
           ]
         },
         src:'index.html',
@@ -204,7 +202,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build',['jshint','clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngAnnotate','uglify','copy','htmlmin','clean:after']);
+  grunt.registerTask('build',['clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngAnnotate','uglify','copy','htmlmin','clean:after']);
   grunt.registerTask('serve', ['dom_munger:read','jshint','connect', 'watch']);
   grunt.registerTask('test',['dom_munger:read','karma:all_tests']);
 
