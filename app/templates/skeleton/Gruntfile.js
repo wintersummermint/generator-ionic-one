@@ -114,9 +114,10 @@ module.exports = function (grunt) {
         options: {
           remove: ['script[data-remove!="false"]','link[data-remove!="false"]'],
           append: [
+            {selector:'body',html:'<script src="app.full.min.js"></script>'},
+            {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'}
             {selector:'head',html:'<link href="lib/ionic/css/ionic.css" rel="stylesheet">'},
             {selector:'head',html:'<link href="css/style.css" rel="stylesheet">'},
-            {selector:'head',html:'<script src="app.full.min.js"></script>'},
             {selector:'head',html:'<script src="lib/ionic/js/ionic.bundle.js"></script>'},
             {selector:'head',html:'<script src="cordova.js"></script>'},
             {selector:'head',html:' <script src="js/app.js"></script>'},
