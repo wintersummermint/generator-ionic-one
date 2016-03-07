@@ -60,7 +60,7 @@ ionicOneGenerator.prototype.askForUiRouter = function askFor() {
         type:'list',
         message: 'Choose a router you wish to use : ',
         default: 1,
-        choices: ['Standard ngRouter','Angular UI Router']
+        choices: ['Standard ngRouter (old not for Ionic)','Angular UI Router']
     }];
 
     this.prompt(prompts, function (props) {

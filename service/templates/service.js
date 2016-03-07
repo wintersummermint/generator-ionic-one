@@ -1,5 +1,5 @@
 angular
-	.module('<%= appname %>').factory('<%= _.camelize(name) %>',function() {
+	.module('<%= appname %>', ['ionic']).factory('<%= _.camelize(name) %>',function() {
 
 		var <%= _.camelize(name) %> = {};
 

@@ -1,5 +1,5 @@
 angular
-	.module('<%= appname %>').directive('<%= _.camelize(name) %>', function() {
+	.module('<%= appname %>', ['ionic']).directive('<%= _.camelize(name) %>', function() {
 		return {
 			restrict: 'E',
 			replace: true,

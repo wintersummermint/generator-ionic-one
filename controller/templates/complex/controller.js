@@ -1,4 +1,4 @@
 angular
-	.module('<%= appname %>').controller('<%= _.camelize(name) %>', function() {
+	.module('<%= appname %>', ['ionic']).controller('<%= _.camelize(name) %>', function() {
 		/* controller logic here */
 	});

@@ -1,5 +1,5 @@
 angular
-	.module('<%= appname %>').controller('<%= ctrlname %>',function($scope){
+	.module('<%= appname %>', ['ionic']).controller('<%= ctrlname %>',function($scope){
 
 
 });

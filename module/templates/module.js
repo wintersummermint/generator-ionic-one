@@ -1,5 +1,5 @@
 angular
-	.module('<%= _.camelize(name) %>', ['ui.bootstrap','ui.utils','<%= routerModuleName %>','ngAnimate']);
+	.module('<%= _.camelize(name) %>', ['ionic','<%= routerModuleName %>']);
 <% if (!uirouter) { %>
 angular
 	.module('<%= _.camelize(name) %>').config(function($routeProvider) {

@@ -1,6 +1,6 @@
 {
   "name": "generator-ionic-one",
-  "version": "1.5.2",
+  "version": "1.0.0",
   "description": "ionic base scaffolding for large projects",
   "keywords": [
     "yeoman-generator",

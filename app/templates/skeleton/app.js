@@ -1,4 +1,4 @@
-angular.module('<%= _.camelize(appname) %>', ['ionic','ui.utils','<%= routerModuleName %>','ngAnimate']);
+angular.module('<%= _.camelize(appname) %>', ['ionic','<%= routerModuleName %>']);
 <% if (!uirouter) { %>
 angular.module('<%= _.camelize(appname) %>').config(function($routeProvider) {
 
