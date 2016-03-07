@@ -93,10 +93,7 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {expand: true, src: ['assets/**'], dest: 'www/'},
-          {expand:true, src: ['bower_components/**'], dest: 'www/'},
-          {src: ['bower_components/font-awesome/fonts/**'], dest: 'www/',filter:'isFile',expand:true},
-          {src: ['bower_components/bootstrap/fonts/**'], dest: 'www/',filter:'isFile',expand:true}
+          {expand: true, src: ['assets/**'], dest: './www/'},
           //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'www/'},
           //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'www/css/',flatten:true,expand:true},
           //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'www/'}
@@ -117,7 +114,12 @@ module.exports = function (grunt) {
         options: {
           remove: ['script[data-remove!="false"]','link[data-remove!="false"]'],
           append: [
-            {selector:'body',html:'<script src="app.full.min.js"></script>'},
+            {selector:'head',html:'<link href="lib/ionic/css/ionic.css" rel="stylesheet">'},
+            {selector:'head',html:'<link href="css/style.css" rel="stylesheet">'},
+            {selector:'head',html:'<script src="app.full.min.js"></script>'},
+            {selector:'head',html:'<script src="lib/ionic/js/ionic.bundle.js"></script>'},
+            {selector:'head',html:'<script src="cordova.js"></script>'},
+            {selector:'head',html:' <script src="js/app.js"></script>'},
             {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'}
           ]
         },
