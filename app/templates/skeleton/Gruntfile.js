@@ -93,7 +93,7 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          {expand: true, src: ['assets/**'], dest: './www/'},
+          {expand: true, src: ['assets/**'], dest: '../www/'},
           //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'www/'},
           //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'www/css/',flatten:true,expand:true},
           //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'www/'}
@@ -123,13 +123,13 @@ module.exports = function (grunt) {
           ]
         },
         src:'index.html',
-        dest: 'www/index.html'
+        dest: '../www/index.html'
       }
     },
     cssmin: {
       main: {
         src:['temp/app.css','<%%= dom_munger.data.appcss %>'],
-        dest:'www/app.full.min.css'
+        dest:'../www/app.full.min.css'
       }
     },
     concat: {
@@ -147,7 +147,7 @@ module.exports = function (grunt) {
     uglify: {
       main: {
         src: 'temp/app.full.js',
-        dest:'www/app.full.min.js'
+        dest:'../www/js/app.full.min.js'
       }
     },
     htmlmin: {
